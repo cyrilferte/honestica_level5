@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-sm-9 col-sm-offset-1">
+            <h1 class="text-center"> All Shifts </h1>
+            <% @shifts.each do |shift| %>
+                <div class="product">
+                    <div class='product-body'>
+                        <h3 class="ttext">Worker : <%= @workers.find_by_id(shift.worker_id).first_name %> (id:<%= shift.worker_id %>)</h3>
+                        <p class="ttext">Start date :<%= shift.start_date %></p>
+                    </div>
+                    <ul class="list-inline product-controls">
+                        <li>
+                            <%= link_to shift_path(shift) do %>
+                                <i class="fa fa-eye"></i>
+                            <% end %>
+                        </li>
+                        <li>
+                            <%= link_to edit_worker_path(shift.worker_id) do %>
+                                <i class="fa fa-pencil"></i>
+                            <% end %>
+                        </li>
+                     </ul>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

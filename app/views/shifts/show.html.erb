@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>SHIFT INFORMATIONS</h1>
+    <div class="container">
+        <p>worker_id :<%= @shift.worker_id %><br>
+        worker name: <%= @worker.first_name %><br>
+        planning_id:<%= @shift.planning_id %><br>
+        start_date: <%= @shift.start_date.strftime('%A %d %B %Y') %><br>
+        price : <% if @shift.start_date.strftime('%A') == "Saturday" || @shift.start_date.strftime('%A') == "Sunday" %>
+            <%=  price = @worker.price_per_shift * 2%><br>
+        <% else %>
+            <%= price = @worker.price_per_shift %><br>
+        <% end %>
+            Commission : <% if @worker.status == "interim" %>
+            <%= price.to_f * 0.05 + 80.0%><br>
+        <% else %>
+            <%= price.to_f * 0.05 %><br>
+        <% end %>
+    </div></p>
+</div>

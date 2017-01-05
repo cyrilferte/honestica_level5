@@ -1,0 +1,10 @@
+  <div class="wrapper">
+    <div class=" container form-signin">
+<%= simple_form_for @worker do |f| %>
+      <%= f.input :first_name, label: "first_name" %>
+      <%= f.input :price_per_shift, label: "price_per_shift" %>
+     <%= f.input :status, collection: ["medic", "interne", "interim"], prompt:"Status", label: "Status"  %>
+      <%= f.button :submit, "ADD", class: "btn btn-primary btn-lg btn-block btn-color" %>
+<% end %>
+</div>
+</div>

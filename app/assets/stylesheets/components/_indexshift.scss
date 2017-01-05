@@ -1,0 +1,35 @@
+.product {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+  background:#ecf0f1;
+}
+
+/* Body design */
+.product-body {
+  flex: 1 1 auto;
+}
+.product-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.product-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+.product:hover {
+  background: #f7f7fa;
+  cursor: pointer;
+  text-decoration: none;
+}
+.product:hover {
+  background: #ecf0f1;
+
+}
+a.product-upvote:hover, a.product-upvote:focus {
+  text-decoration: none;
+}

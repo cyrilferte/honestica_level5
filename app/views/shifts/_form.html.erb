@@ -1,0 +1,11 @@
+  <div class="wrapper">
+    <div class=" container form-signin">
+<%= simple_form_for @shift do |f| %>
+
+      <%= f.input :planning_id, label: "planning_id" %>
+      <%= f.input :worker_id, :collection => @workers,:label_method => :first_name, :value_method => :id,:label => "workers" ,:include_blank => false, prompt:"choose the worker" %>
+      <%= f.input :start_date, label: "date" %>
+      <%= f.button :submit, "ADD", class: "btn btn-primary btn-lg btn-block btn-color" %>
+<% end %>
+</div>
+</div>
